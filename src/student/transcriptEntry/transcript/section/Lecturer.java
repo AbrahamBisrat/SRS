@@ -6,7 +6,7 @@ import java.util.List;
 public class Lecturer {
 	private String name;
 	private String id;
-	List<Course> courses;
+	private List<Course> courses;
 	
 	// package level
 	Lecturer(String name, String id){
@@ -43,7 +43,7 @@ public class Lecturer {
 			coursesList = " No assigned Courses";
 		for(Course c : courses) 
 			coursesList += c + "\n";
-		return " [ Lecturer Name : " + name + "\t Id : " + id + " ] \n"
+		return " [ Lecturer Name : " + name + "\t>> Id : " + id + " ] \n"
 				+ coursesList;
 	}
 }

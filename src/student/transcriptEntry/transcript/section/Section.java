@@ -49,11 +49,17 @@ public class Section {
 		String schedules = "";
 		String students = "";
 		
-		for(String s : schedule)
-			schedules += s + "  :  ";
+		if(schedule != null)
+			for(String s : schedule)
+				schedules += s + "  :  ";
+		else
+			schedules = "Something went wrong!";
 		
-		for(Student s : studentList)
-			students += s;
+		if(studentList != null)
+			for(Student s : studentList)
+				students += s;
+		else
+			students = "Something went wrong";
 		
 		return " [ Course : " + course.getCourseName() 
 				+ " : " + course.getCourseCode()
