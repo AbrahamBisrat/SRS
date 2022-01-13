@@ -8,10 +8,9 @@ public class Section {
 	private Lecturer lecturer;
 	private List<String> schedule;
 	private List<Student> studentList;
+	private List<TranscriptEntry> gradeSheet;
 	
 	Section(Course c, Lecturer l, List<String> s){
-		if(course == null || lecturer == null || schedule.size() == 0)
-			return;
 		course = c;
 		lecturer = l;
 		schedule = s;
@@ -55,16 +54,16 @@ public class Section {
 		else
 			schedules = "Something went wrong!";
 		
-		if(studentList != null)
+		if(studentList.size() > 0)
 			for(Student s : studentList)
 				students += s;
-		else
-			students = "Something went wrong";
+		else if(studentList.size() == 0)
+			students = "   >>>   No students enrolled in this class";
 		
 		return " [ Course : " + course.getCourseName() 
 				+ " : " + course.getCourseCode()
 				+ "\t Lecturer : " + lecturer.getName()
-				+ "\t Schedule : " + schedules + " ] "
+				+ " ]\n Schedule : " + schedules + " ] "
 				+ "\n currently enrolled students list : \n"
 				+ students;
 	}

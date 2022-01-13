@@ -1,22 +1,21 @@
 package student.transcriptEntry.transcript.section;
 
+import java.util.ArrayList;
+
 public class Student {
 	private String name;
 	private int studId;
-	private Transcript transcript; // Collection of TranscriptEntries
+	private List<TranscriptEntry> grades;
 	
 	Student(String name, int id){
 		this.name = name;
 		studId = id;
-		transcript = new Transcript(this);
+		grades = new ArrayList<TranscriptEntry>;
 	}
 	
-	public TranscriptEntry addTranscriptEntry(TranscriptEntry e) {
-		transcript.addSingleEntry(e);
-		return e;
+	public Transcript getTranscript() { 
+		return new Transcript(grades, this); 
 	}
-	
-	public Transcript getTranscript() { return transcript; }
 	
 	public String getName() { return name; }
 	

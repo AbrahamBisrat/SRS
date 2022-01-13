@@ -1,13 +1,15 @@
 package student.transcriptEntry.transcript.section;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Transcript {
-	Student student;
+	Student s;
 	List<TranscriptEntry> singleEntries;
 	
-	Transcript(Student s){
-		this.student = s;
+	Transcript(Student s){ 
+		this.s = s;
+		singleEntries = new ArrayList<TranscriptEntry>();
 	}
 	
 	public TranscriptEntry addSingleEntry(TranscriptEntry t) {

@@ -6,10 +6,9 @@ public class TranscriptEntry {
 	String grade;
 	
 	TranscriptEntry(Student student, Section section, String grade){
-		if(student == null || section == null || grade == null) return;
-		this.student = student;
 		this.section = section;
 		this.grade = grade;
+		this.student = student;
 	}
 	
 	public String getGrade() { return grade; }
