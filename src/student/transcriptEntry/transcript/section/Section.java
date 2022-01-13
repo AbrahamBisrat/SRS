@@ -6,7 +6,7 @@ import java.util.List;
 public class Section {
 	private Course course;
 	private Lecturer lecturer;
-	private List<String> schedule = new ArrayList<String>();
+	private List<String> schedule;
 	private List<Student> studentList;
 	
 	Section(Course c, Lecturer l, List<String> s){
@@ -36,9 +36,13 @@ public class Section {
 		studentList.clear();
 	}
 	
-	public List<String> getSchedule() { return schedule; }
-	public List<Student> getStudents() { return studentList; }
+	public Lecturer getLecturer() { return lecturer; }
 	
+	public Course getCourse() { return course; }
+	
+	public List<String> getSchedule() { return schedule; }
+	
+	public List<Student> getStudents() { return studentList; }
 	
 	@Override
 	public String toString() {

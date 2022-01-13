@@ -26,9 +26,12 @@ public class Lecturer {
 		}
 		return false;
 	}
+	public void clearCourses() { courses.clear(); }
 	
 	public String getName() { return name; }
+	
 	public String getId() { return id; }
+	
 	public List<Course> getCourses() { return courses; }
 	
 	@Override

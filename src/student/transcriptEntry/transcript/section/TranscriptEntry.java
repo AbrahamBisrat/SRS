@@ -12,6 +12,12 @@ public class TranscriptEntry {
 		this.grade = grade;
 	}
 	
-	// you will need to implement the depedency classes to figure out how to
-	// override the toString method.
+	public String getGrade() { return grade; }
+	
+	@Override
+	public String toString() {
+		return " [ " + section.getCourse().getCourseName() 
+				+ " : " + section.getCourse().getCourseCode() 
+				+ "\t Grade :  " + getGrade() + " ] \n";
+	}
 }

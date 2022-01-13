@@ -7,22 +7,30 @@ public class Student {
 	private String name;
 	private int studId;
 	private List<TranscriptEntry> transcriptEntries;
-	private Transcript transcript; 
+	private Transcript transcript; // Collection of TranscriptEntries
 	
-	// package level
+	
 	Student(String name, int id){
 		this.name = name;
 		studId = id;
 		transcriptEntries = new ArrayList<TranscriptEntry>();	
 	}
 	
+	// Implement a transcript entry to the main transcript
+	
 	public TranscriptEntry addTranscriptEntry(TranscriptEntry e) {
 		transcriptEntries.add(e);
 		return e;
 	}
 	
+	public Transcript getTranscript() {
+		return transcript;
+	}
+	
 	public String getName() { return name; }
+	
 	public int getId() { return studId; }
+	
 	public List<TranscriptEntry> getTranscriptEntries() { return transcriptEntries; }
 	
 	@Override
