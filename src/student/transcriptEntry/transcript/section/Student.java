@@ -7,6 +7,7 @@ public class Student {
 	private String name;
 	private int studId;
 	private List<TranscriptEntry> transcriptEntries;
+	private Transcript transcript; 
 	
 	// package level
 	Student(String name, int id){
@@ -24,14 +25,11 @@ public class Student {
 	public int getId() { return studId; }
 	public List<TranscriptEntry> getTranscriptEntries() { return transcriptEntries; }
 	
+	
+	// need to be revised
+	
 	@Override
 	public String toString() {
-		String allEntries = "";
-		
-		for(TranscriptEntry t : transcriptEntries)
-			allEntries += t + "\n";
-		
-		return "[ Name: " + name + "\t Student Id Number: " + studId + " ] \n" 
-				+ allEntries;
+		return " [ " + getId() + " : " + getName() + " ] \n";
 	}
 }
