@@ -19,6 +19,7 @@ public class Lecturer {
 		courses.add(c);
 		return c;
 	}
+	
 	public boolean removeCourse(Course c) {
 		if(courses.contains(c)) {
 			courses.remove(c);
@@ -26,6 +27,7 @@ public class Lecturer {
 		}
 		return false;
 	}
+	
 	public void clearCourses() { courses.clear(); }
 	
 	public String getName() { return name; }

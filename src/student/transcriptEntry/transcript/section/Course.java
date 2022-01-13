@@ -5,7 +5,7 @@ public class Course {
 	private String courseCode;
 	
 	// package level
-	Course(String cName, String cCode, Lecturer l){
+	Course(String cName, String cCode){
 		courseName = cName;
 		courseCode = cCode;
 	}
