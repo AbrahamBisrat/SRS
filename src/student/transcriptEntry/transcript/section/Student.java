@@ -25,9 +25,6 @@ public class Student {
 	public int getId() { return studId; }
 	public List<TranscriptEntry> getTranscriptEntries() { return transcriptEntries; }
 	
-	
-	// need to be revised
-	
 	@Override
 	public String toString() {
 		return " [ " + getId() + " : " + getName() + " ] \n";

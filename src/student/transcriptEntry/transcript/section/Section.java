@@ -8,7 +8,7 @@ public class Section {
 	private Lecturer lecturer;
 	private List<String> schedule = new ArrayList<String>();
 	private List<Student> studentList;
-	// package level
+	
 	Section(Course c, Lecturer l, List<String> s){
 		if(course == null || lecturer == null || schedule.size() == 0)
 			return;
@@ -40,8 +40,6 @@ public class Section {
 	public List<Student> getStudents() { return studentList; }
 	
 	
-	// add implementation for students toSting()
-	
 	@Override
 	public String toString() {
 		String schedules = "";
@@ -57,7 +55,7 @@ public class Section {
 				+ " : " + course.getCourseCode()
 				+ "\t Lecturer : " + lecturer.getName()
 				+ "\t Schedule : " + schedules + " ] "
-				+ "\n Students currently enrolled : \n"
+				+ "\n currently enrolled students list : \n"
 				+ students;
 	}
 }
