@@ -6,8 +6,6 @@ import java.util.List;
 public class Section {
 //	private Course course;
 //	private Lecturer lecturer;
-//	private List<String> schedule;
-//	private List<Student> studentList;
 	private String courseName;
 	private int sectionNumber;
 	private List<TranscriptEntry> gradeSheet;
@@ -25,9 +23,7 @@ public class Section {
 	public void setGradeSheet(TranscriptEntry entry) { gradeSheet.add(entry); }
 	
 	
-	public 
-	
-	void scrubbed() {
+	public void scrubbed() {
 //		public List<TranscriptEntry> get
 		
 		
