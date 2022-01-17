@@ -1,4 +1,4 @@
-package student.transcriptEntry.transcript.section;
+package studentRegistrationSystem;
 
 import java.util.ArrayList;
 import java.util.List;

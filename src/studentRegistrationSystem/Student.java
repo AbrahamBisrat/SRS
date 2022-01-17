@@ -1,4 +1,4 @@
-package student.transcriptEntry.transcript.section;
+package studentRegistrationSystem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,14 +26,4 @@ public class Student {
 		System.out.println(name);
 		gradeSheet.add(entry);
 	}
-	
-	
-//	public String getName() { return name; }
-//	
-//	public int getId() { return studId; }
-//	
-//	@Override
-//	public String toString() {
-//		return " [ " + getId() + " : " + getName() + " ] \n";
-//	}
 }

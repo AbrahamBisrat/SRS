@@ -1,6 +1,4 @@
-package student.transcriptEntry.transcript.section;
-
-import java.util.Arrays;
+package studentRegistrationSystem;
 
 public class TranscriptEntry {
 	private Student student;
@@ -21,13 +19,6 @@ public class TranscriptEntry {
 	public String getGrade() { return grade; }
 	public Student getStudent() { return student; }
 	public Section getSection() { return section; }
-	
-	
-//	@Override public String toString() {
-//		return " [ " + section.getCourse().getCourseName() 
-//				+ " : " + section.getCourse().getCourseCode() 
-//				+ "\t Grade :  " + getGrade() + " ] \n";
-//	}
 	
 	@Override public String toString() {
 		return "Student: " + student.getName() + "\n"

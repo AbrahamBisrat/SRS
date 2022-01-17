@@ -1,4 +1,4 @@
-package student.transcriptEntry.transcript.section;
+package studentRegistrationSystem;
 
 public class Course {
 	private String courseName;
