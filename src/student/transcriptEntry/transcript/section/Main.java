@@ -1,7 +1,6 @@
 package student.transcriptEntry.transcript.section;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main { // We are not in Kansas anymore, This is Pandora!
@@ -28,6 +27,10 @@ public class Main { // We are not in Kansas anymore, This is Pandora!
 		System.out.println("Courses that recon took: " + m.getCourseNames(m.recon));
 		
 		// add one more method to find students who have got a certain grade only.
+		System.out.println(m.studentsWithGrade("B+"));
+		
+		System.out.println("Students with A " + studentsWithGradeFromSection(m.mppA, "A"));
+		System.out.println("Students with B " + studentsWithGradeFromSection(m.mppA, "B"));
 	}
 	
 	private void fetchTestingData() {
@@ -50,6 +53,27 @@ public class Main { // We are not in Kansas anymore, This is Pandora!
 		entries[2] = new TranscriptEntry(alice, mppB, "B+");
 		entries[3] = new TranscriptEntry(malcom, mppA, "B");
 		
+	}
+	
+	private List<String> studentsWithGrade(String thisGrade){
+		List<String> queriedStudents = new ArrayList<>();
+		
+		for(Student eachStudent : students)
+			for(TranscriptEntry eachCourse : eachStudent.getGrades())
+				if(eachCourse.getGrade().equals(thisGrade))
+					queriedStudents.add(eachStudent.getName());
+		
+		return queriedStudents;
+	}
+	
+	private static List<String> studentsWithGradeFromSection(Section thisSection, String thisGrade){
+		List<String> queriedStudents = new ArrayList<>();
+		
+		for(TranscriptEntry eachStudent : thisSection.getGradesheet())
+			if(eachStudent.getGrade().equals(thisGrade))
+				queriedStudents.add(eachStudent.getStudent().getName());
+				
+		return queriedStudents;
 	}
 	
 	private Transcript getTranscript(Student s) { return s.getTranscript();	}

@@ -14,7 +14,6 @@ public class TranscriptEntry {
 		this.grade = grade;
 		this.student = student;
 		
-//		an attempt to automatic entries to transcript and sections
 		student.setGrades(this);
 		section.setGradeSheet(this);
 	}
