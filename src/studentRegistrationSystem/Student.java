@@ -6,8 +6,7 @@ import java.util.List;
 public class Student {
 	private String name;
 	private int studId;
-	private List<TranscriptEntry> gradeSheet;
-	
+
 	Student(String name, int id){
 		this.name = name;
 		studId = id;
@@ -26,4 +25,6 @@ public class Student {
 		System.out.println(name);
 		gradeSheet.add(entry);
 	}
+	// get transcript method here
+	// static method from transcript to get transcript
 }
