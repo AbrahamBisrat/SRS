@@ -3,7 +3,7 @@ package studentRegistrationSystem;
 import java.util.List;
 
 public class Transcript {
-	private Student student;
+	
 	private List<TranscriptEntry> entries; 
 	
 	Transcript(List<TranscriptEntry> te, Student s){ 
@@ -11,7 +11,7 @@ public class Transcript {
 		entries = te;
 	}
 	
-	public Student getStudent() { return student; }
+	
 	
 	@Override public String toString() {
 		if(entries == null || entries.isEmpty()) return "No data";
