@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Section {
-//	private Course course;
-//	private Lecturer lecturer;
-	private String courseName;
+	private Course course;
+	private Lecturer lecturer;
 	private int sectionNumber;
-	private List<TranscriptEntry> gradeSheet;
+
 	
 	Section(){
 		gradeSheet = new ArrayList<>();
